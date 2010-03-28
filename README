@@ -1,0 +1,11 @@
+Mozilla Chrome Tests
+====================
+
+Dynamic chrome privleged test loading.
+--------------------------------------
+
+A Mozilla Toolkit extension for testing projects that require chrome privleges
+in Mozilla Platform applications.  This is useful for Mozilla JavaScript
+modules, XULRunner applications, and Firefox and Thunderbird extensions among
+others.
+

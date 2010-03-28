@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>chrometest@fireworksproject.com</em:id>
+    <em:name>Chrome Test Loader</em:name>
+    <em:version>0.1</em:version>
+    <em:creator>The Fireworks Project</em:creator>
+    <em:description>Dynamic chrome privleged test loading.</em:description>
+    <em:homepageURL>http://www.fireworksproject.com/projects/mozilla_chrome_test/</em:homepageURL>
+
+    <!-- Target Application this extension can install into, 
+         with minimum and maximum supported versions. --> 
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>3.6.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:updateURL>https://fireworkscomputer.appspot.com/mozilla-downloads/chrometest-updates.rdf</em:updateURL>
+
+  </Description>
+</RDF>

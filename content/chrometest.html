@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>Chrome Test</title>
+    <style type="text/css">
+      * { margin: 0; padding: 0; }
+
+      .clickme {
+        color: #069;
+        cursor: pointer;
+      }
+
+      body {
+        font-size: 17px;
+        margin: 1em 15% 0 8%;
+      }
+      
+      h2, h3 {
+        margin-bottom: 1em;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
+      #file-list {
+        border: 3px solid #ccc;
+        padding: 1em;
+        width: 100%;
+        margin-bottom: 2em;
+      }
+
+      .file-row {
+        margin-top: 0.3em;
+        background: #ddd;
+      }
+
+      td {
+        padding: 0.2em 2em 0.3em 3em;
+      }
+
+      #form {
+        padding: 1em;
+        border: 3px solid #ccc;
+      }
+
+      #instructions {
+        font-weight: bold;
+      }
+
+      input {
+        margin: 0 2em 0 1em;
+        width: 40%;
+      }
+
+      #docs {
+        margin-top: 2em;
+      }
+    </style>
+    <script type="application/javascript;version=1.7"
+            src="chrometest.js">
+    </script>
+  </head>
+  <body>
+    <div id="installed-items">
+      <h2>Installed Items</h2>
+      <table id="file-list">
+      </table>
+    </div>
+    <div id="form">
+      <h3>Install files into the chrome content or resource directories.</h3>
+      <p id="instructions">
+      Valid URL protocols include file://, chrome://, resource://, and http://
+      </p>
+      <p class="form-row">
+        <label>URL</label>
+        <input id="content" type="text" />
+      </p>
+      <p class="form-row">
+        <label>Target Name</label>
+        <input id="target"type="text" />
+      </p>
+      <p class="form-row">
+        <button onclick="CT.install_content(document.getElementById('content').value, document.getElementById('target').value)">
+          install to chrome://chrometest/content/
+        </button>
+        <button onclick="CT.install_resource(document.getElementById('content').value, document.getElementById('target').value)"/>
+          install to resource://chrometest/resources/
+        </button>
+      </p>
+    </div>
+    <div id="docs">
+      <h2>Documentation.</h2>
+      <p>
+        Chrome Tester provides a way for you to easily install test files into
+        the chrome of the Chrome Tester extension. Currently installed files
+        are listed above. Choose one by clicking on it, and it will open in a
+        new tab.
+      </p>
+      <p>
+        This tool greatly simplifies testing parts of your program that require
+        chrome privileges within the Mozilla platform including access to the
+        <code>Components</code> object.
+      </p>
+      <p>
+        For the sake of simplicity, files are made available in two forms -
+        <b>"chrome://"</b> and <b>"resource://"</b>. You designate which type
+        the file will be by choosing either the "install chrome://" or "install
+        resource://" button when installing.  Typically content files like
+        .xul, .html, and .css files should be loaded as "chrome://" and
+        JavaScript modules and other resources should be loaded as
+        "resources://".
+      </p>
+      <p>
+        Also, the <a
+          href="https://addons.mozilla.org/en-US/firefox/addon/4453">Chrome
+          List extension</a> makes a very nice companion tool.
+      </p>
+    </div>
+  </body>
+</html>
