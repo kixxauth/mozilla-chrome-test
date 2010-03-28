@@ -6,7 +6,7 @@
     <em:name>Chrome Test Loader</em:name>
     <em:version>0.1</em:version>
     <em:creator>The Fireworks Project</em:creator>
-    <em:description>Dynamic chrome privleged test loading.</em:description>
+    <em:description>Install files into privileged chrome for testing.</em:description>
     <em:homepageURL>http://www.fireworksproject.com/projects/mozilla_chrome_test/</em:homepageURL>
 
     <!-- Target Application this extension can install into, 
